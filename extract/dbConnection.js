@@ -1,7 +1,6 @@
 require('dotenv').config()
 const { Sequelize } = require('sequelize')
 
-
 // Connection to OLTP Database
 const sequelizeSales = new Sequelize({
     database: process.env.DB_NAME, // <-- Operational Database Name
@@ -13,6 +12,10 @@ const sequelizeSales = new Sequelize({
 })
 
 
+async function connectToDb() {
+    await sequelizeSales.validate()
+    // await sequelizeSales.sync()
+}
 
 // Connection to OLAP Data Warehouse
 const sequelizeSalesDW = new Sequelize({
@@ -23,3 +26,17 @@ const sequelizeSalesDW = new Sequelize({
     dialect: process.env.DB_DIALECT,
     logging: false,
 })
+
+async function connectToDw() {
+    await sequelizeSalesDW.validate()
+    // await sequelizeSalesDW.sync()
+}
+
+const db = {
+    salesDb: sequelizeSales,
+    salesDw: sequelizeSalesDW,
+    connectToDb,
+    connectToDw,
+}
+
+module.exports = db
