@@ -24,7 +24,10 @@ Create a `.env` file and copy in the contents of the `.env.example` file, and fi
 ## In the Code
 So far I have:
 - Created the `extract` folder to hold source code to do with extracting data from at least one source (for now, the *sales* DB).
-- Created a `dbCOnnection.js` file to connect to the *sales* DB we are extracting data from, and to the *sales_dw* DB we are loading into.
+- Created a `dbConnection.js` file to connect to the *sales* DB we are extracting data from, and to the *sales_dw* DB we are loading into.
+- Created the `transform` folder to hold source code logic to do with transforming (cleaning / validating / removing) data.
+- Created a `sidenotes` folder to revisit / refresh your understanding of JavaScript logic, e.g. using the `.map()` function.
+- Created a `rules.md` file to note how I'm processing the data.
 
 ## Todo:
 - Extract data from *sales* DB.
