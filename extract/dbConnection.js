@@ -33,8 +33,8 @@ async function connectToDw() {
 }
 
 const db = {
-    salesDb: sequelizeSales,
-    salesDw: sequelizeSalesDW,
+    salesDbConnection: sequelizeSales,
+    salesDwConnection: sequelizeSalesDW,
     connectToDb,
     connectToDw,
 }

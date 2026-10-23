@@ -57,8 +57,8 @@ function isValidEmail(email) {
     return true
 }
 
-for (let e of emails) {
-    console.log(isValidEmail(e))
-}
+// for (let e of emails) {
+//     console.log(isValidEmail(e))
+// }
 
 module.exports = isValidEmail

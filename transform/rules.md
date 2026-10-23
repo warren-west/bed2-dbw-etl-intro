@@ -6,4 +6,4 @@ Customer Rules:
 1. Check email for validation.
     - Contains an "@"
     - Contains strings before and after "@"
-
+    - If the email is invalid - replace it with "No email provided"
