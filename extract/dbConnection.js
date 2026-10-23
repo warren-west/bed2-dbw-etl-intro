@@ -14,7 +14,6 @@ const sequelizeSales = new Sequelize({
 
 async function connectToDb() {
     await sequelizeSales.validate()
-    // await sequelizeSales.sync()
 }
 
 // Connection to OLAP Data Warehouse
@@ -29,7 +28,6 @@ const sequelizeSalesDW = new Sequelize({
 
 async function connectToDw() {
     await sequelizeSalesDW.validate()
-    // await sequelizeSalesDW.sync()
 }
 
 const db = {

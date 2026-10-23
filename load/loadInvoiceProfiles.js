@@ -7,7 +7,7 @@ async function loadInvoiceProfiles() {
     await salesDwConnection.getQueryInterface()
         .bulkInsert('DimInvoiceProfile', profiles, { ignoreDuplicates: true })
 
-    console.log("DimInvoiceProfile table loaded successfully! (y)")
+    return "DimInvoiceProfile table loaded successfully! (y)"
 }
 
 module.exports = { loadInvoiceProfiles }

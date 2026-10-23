@@ -15,8 +15,8 @@ T:
 4. InvoiceProfiles (done)
 
 L:
-1. CustomerDim
-2. ProductDim
-3. DatesDim
+1. CustomerDim (done)
+2. ProductDim (done)
+3. DatesDim (done)
 4. InvoiceProfilesDim (done)
 5. Fact Table
